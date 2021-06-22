@@ -27,9 +27,7 @@ dependencies:
   - rasterio
   - requests
   - rtree
-  - scipy
   - seaborn
-  - spacy
   - tensorflow
   - wordcloud
   - xlrd

@@ -1,14 +1,11 @@
-# Python pour data-scientists et économistes :snake:
-[![build-doc Actions Status](https://github.com/linogaliana/python-datascientist/actions/workflows/prod.yml/badge.svg)](https://github.com/linogaliana/python-datascientist/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/linogaliana/python-datascientist)](https://hub.docker.com/repository/docker/linogaliana/python-datascientist/general)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/linogaliana/python-datascientist/master)
-[![Onyxia](https://img.shields.io/badge/launch-onyxia-blue)](https://datalab.sspcloud.fr/my-lab/catalogue/inseefrlab-helm-charts-datascience/jupyter/deploiement?kubernetes.role=admin)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/linogaliana/python-datascientist/blob/pandas_intro/static/notebooks/numpy.ipynb)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/86ebd982-38e0-4e04-81f4-4819131eb800/deploy-status)](https://app.netlify.com/sites/linogaliana-teaching/deploys)
+# Image docker pour le cours "Python pour data-scientists et économistes" :snake:
+[![build-doc Actions Status](https://github.com/linogaliana/python-datascientist-docker/actions/workflows/prod.yml/badge.svg)](https://github.com/linogaliana/python-datascientist-docker/actions)
+[![Docker Pulls](https://img.shields.io/docker/pulls/linogaliana/python-datascientist-docker)](https://hub.docker.com/repository/docker/linogaliana/python-datascientist-docker/general)
 
-
-Ce dépôt Github stocke les fichiers sources ayant permis de construire le site
+Ce dépôt Github stocke l'image docker nécessaire pour construire le site
 <https://linogaliana-teaching.netlify.app/>. 
+Le dépôt des codes sources du site est disponible sur
+[Github](https://github.com/linogaliana/python-datascientist)
 
 Il s'agit de l'ensemble du cours *Python pour les data-scientists et économistes* :snake:
 que je donne en  
