@@ -28,8 +28,9 @@ dependencies:
   - requests
   - rtree
   - seaborn
-  - spacy
   - tensorflow
   - wordcloud
   - xlrd
   - yellowbrick
+  - pip:
+    - spacy
