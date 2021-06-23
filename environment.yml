@@ -28,6 +28,7 @@ dependencies:
   - requests
   - rtree
   - seaborn
+  - spacy
   - tensorflow
   - wordcloud
   - xlrd
