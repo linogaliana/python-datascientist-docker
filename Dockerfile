@@ -47,7 +47,7 @@ RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate python-ENSAE" >> ~/.bashrc
 
-
+RUN python -m spacy download fr_core_news_sm
 
 # Second stage: use the installed packages directories
 # FROM $BASE_IMAGE
