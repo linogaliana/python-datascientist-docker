@@ -8,7 +8,6 @@ dependencies:
   - contextily
   - dash
   - descartes
-  - fasttext
   - folium
   - geopandas
   - geoplot
@@ -34,3 +33,4 @@ dependencies:
   - yellowbrick
   - pip:
     - spacy
+    - fasttext
