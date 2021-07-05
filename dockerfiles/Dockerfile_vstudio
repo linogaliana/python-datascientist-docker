@@ -1,0 +1,12 @@
+FROM linogaliana/vscode-python:conda
+
+# Create the environment:
+COPY environment.yml .
+RUN conda env create -f environment.yml -n pythonENSAE
+
+
+# MAKE SURE THE CONDAENV IS USED ----------------
+
+ENV CONDA_DEFAULT_ENV="pythonENSAE"
+
+ENV PATH="/home/coder/.conda/envs/basesspcloud/bin:$PATH"

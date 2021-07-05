@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - vstudio
 
 jobs:
   docker:
@@ -31,6 +32,8 @@ jobs:
         if: ${{ github.repository == 'linogaliana/python-datascientist-docker' }}
         id: docker_build
         uses: docker/build-push-action@v2
+        with:
+          file: "dockerfiles/Dockerfile_vstudio"
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         with:
