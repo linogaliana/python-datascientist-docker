@@ -11,6 +11,8 @@ dependencies:
   - geopandas
   - geoplot
   - keras
+  - plotly
+  - python-kaleido
   - tensorflow
   - pip:
     - dash
@@ -22,9 +24,7 @@ dependencies:
     - nltk
     - numpy
     - pandas
-    - plotly
     - pyLDAvis
-    - python-kaleido
     - pywaffle
     - rasterio
     - requests
