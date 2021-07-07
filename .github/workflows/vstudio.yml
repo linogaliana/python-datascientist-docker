@@ -1,4 +1,4 @@
-name: Docker Build (R + Python for website)
+name: Docker Build (Visual Studio)
 
 on:
   push:
@@ -34,8 +34,9 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         with:
+          file: "dockerfiles/Dockerfile_vstudio"
           push: true
-          tags: linogaliana/python-datascientist:latest
+          tags: linogaliana/python-datascientist-vstudio:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

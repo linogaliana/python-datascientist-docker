@@ -6,31 +6,31 @@ dependencies:
   - GDAL
   - bs4
   - contextily
-  - dash
   - descartes
   - folium
   - geopandas
   - geoplot
-  - jupyter
-  - jupytext
   - keras
-  - matplotlib
-  - nbconvert
-  - nltk
-  - numpy
-  - pandas
   - plotly
-  - pyLDAvis
   - python-kaleido
-  - pywaffle
-  - rasterio
-  - requests
-  - rtree
-  - seaborn
   - tensorflow
-  - wordcloud
-  - xlrd
-  - yellowbrick
   - pip:
-    - spacy
+    - dash
     - fasttext
+    - jupyter
+    - jupytext
+    - matplotlib
+    - nbconvert
+    - nltk
+    - numpy
+    - pandas
+    - pyLDAvis
+    - pywaffle
+    - rasterio
+    - requests
+    - rtree
+    - seaborn
+    - spacy
+    - wordcloud
+    - xlrd
+    - yellowbrick
