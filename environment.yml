@@ -19,6 +19,7 @@ dependencies:
     - fasttext
     - jupyter
     - jupytext
+    - lxml
     - matplotlib
     - nbconvert
     - nltk
@@ -30,6 +31,7 @@ dependencies:
     - requests
     - rtree
     - seaborn
+    - selenium
     - spacy
     - wordcloud
     - xlrd
