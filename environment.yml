@@ -36,4 +36,4 @@ dependencies:
     - wordcloud
     - xlrd
     - yellowbrick
-    - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master"
+    - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master#egg=pynsee"
