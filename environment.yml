@@ -16,6 +16,7 @@ dependencies:
   - tensorflow
   - pip:
     - dash
+    - elasticsearch[async]
     - fasttext
     - jupyter
     - jupytext
