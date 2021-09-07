@@ -30,6 +30,7 @@ dependencies:
     - python-Levenshtein
     - pywaffle
     - rasterio
+    - rapidfuzz
     - requests
     - rtree
     - seaborn
