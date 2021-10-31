@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - mamba
 
 jobs:
   docker:
@@ -35,7 +36,7 @@ jobs:
           GITHUB_PAT: ${{ secrets.PAT }}
         with:
           push: true
-          tags: linogaliana/python-datascientist:latest
+          tags: linogaliana/python-datascientist:mamba
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

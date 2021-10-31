@@ -33,7 +33,9 @@ RUN conda --version
 
 # Create the environment:
 COPY environment.yml .
-RUN conda env create -f environment.yml -n python-ENSAE
+RUN conda create -n python-ENSAE python
+RUN conda install mamba -n python-ENSAE -c conda-forge
+RUN mamba env update -n python-ENSAE --file environment.yml
 
 
 # R packages 

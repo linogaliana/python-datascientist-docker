@@ -2,7 +2,9 @@ FROM linogaliana/vscode-python:conda
 
 # Create the environment:
 COPY environment.yml .
-RUN conda env create -f environment.yml -n pythonENSAE
+RUN conda create -n python-ENSAE python
+RUN conda install mamba -n python-ENSAE -c conda-forge
+RUN mamba env update -n python-ENSAE --file environment.yml
 
 RUN echo "{\"workbench.colorTheme\": \"Default Dark+\", \"python.pythonPath\": \"/home/coder/.conda/envs/pythonENSAE/bin\"}" > /home/coder/.local/share/code-server/User/settings.json
 RUN echo "import sys ; from IPython.core.ultratb import ColorTB ; sys.excepthook = ColorTB() ;" >> /home/coder/.conda/envs/pythonENSAE/lib/python3.9/site-packages/sitecustomize.py
