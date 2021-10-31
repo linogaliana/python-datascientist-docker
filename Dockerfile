@@ -34,6 +34,7 @@ RUN conda --version
 # Create the environment:
 COPY environment.yml .
 RUN conda create -n python-ENSAE python=3.9
+RUN source /opt/conda/etc/profile.d/conda.sh
 RUN conda activate python-ENSAE
 RUN conda install mamba -n python-ENSAE -c conda-forge
 RUN mamba env update -n python-ENSAE --file environment.yml
