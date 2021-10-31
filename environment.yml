@@ -2,7 +2,7 @@ channels:
   - conda-forge
 
 dependencies:
-  - python
+  - python=3.9
   - GDAL
   - bs4
   - contextily
