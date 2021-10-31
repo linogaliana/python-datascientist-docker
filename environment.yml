@@ -17,7 +17,6 @@ dependencies:
   - pip:
     - dash
     - elasticsearch[async]
-    - imio
     - fasttext
     - jupyter
     - jupytext
