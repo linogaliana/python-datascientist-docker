@@ -5,11 +5,6 @@ COPY environment.yml .
 
 RUN conda create -n python-ENSAE python=3.9
 
-RUN . /root/.bashrc && \
-    /root/anaconda3/bin/conda init bash && \
-    /root/anaconda3/bin/conda create -n py37 python=3.7 anaconda && \
-    /root/anaconda3/bin/conda activate py37
-
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate python-ENSAE" >> ~/.bashrc
 
