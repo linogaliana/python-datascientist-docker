@@ -5,15 +5,13 @@ USER root
 # Create the environment:
 COPY environment.yml .
 
-RUN conda install mamba -n base -c conda-forge
-
-USER coder
-
-RUN mamba env create --force -n python-ENSAE --file environment.yml
+RUN conda install mamba -n base -c conda-forge && \
+    mamba env create --force -n python-ENSAE --file environment.yml
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate python-ENSAE" >> ~/.bashrc
 
+RUN conda info --envs
 
 
 RUN echo "{\"workbench.colorTheme\": \"Default Dark+\", \"python.pythonPath\": \"/home/coder/.conda/envs/pythonENSAE/bin\"}" > /home/coder/.local/share/code-server/User/settings.json
