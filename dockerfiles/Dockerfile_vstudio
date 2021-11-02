@@ -5,15 +5,19 @@ USER root
 # Create the environment:
 COPY environment.yml .
 
-RUN conda install mamba -n base -c conda-forge && \
-    mamba env create --force -n python-ENSAE --file environment.yml
+RUN conda install mamba -n base -c conda-forge
 
+USER coder
+
+RUN mamba env create --force -n python-ENSAE --file environment.yml
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate python-ENSAE" >> ~/.bashrc
 
-RUN echo "{\"workbench.colorTheme\": \"Default Dark+\", \"python.pythonPath\": \"/opt/conda/envs/pythonENSAE/bin\"}" > /home/coder/.local/share/code-server/User/settings.json
-RUN echo "import sys ; from IPython.core.ultratb import ColorTB ; sys.excepthook = ColorTB() ;" >> /opt/conda/envs/pythonENSAE/lib/python3.9/site-packages/sitecustomize.py
+
+
+RUN echo "{\"workbench.colorTheme\": \"Default Dark+\", \"python.pythonPath\": \"/home/coder/.conda/envs/pythonENSAE/bin\"}" > /home/coder/.local/share/code-server/User/settings.json
+RUN echo "import sys ; from IPython.core.ultratb import ColorTB ; sys.excepthook = ColorTB() ;" >> /home/coder/.conda/envs/pythonENSAE/lib/python3.9/site-packages/sitecustomize.py
 
 # MAKE SURE THE CONDAENV IS USED ----------------
 
