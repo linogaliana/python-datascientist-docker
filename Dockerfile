@@ -33,7 +33,12 @@ RUN conda --version
 
 # Create the environment:
 COPY environment.yml .
-RUN conda env create -f environment.yml -n python-ENSAE
+
+RUN conda install mamba -n base -c conda-forge && \
+    mamba env create --force -q -n python-ENSAE --file environment.yml
+
+RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
+    echo "conda activate python-ENSAE" >> ~/.bashrc
 
 
 # R packages 
@@ -44,13 +49,4 @@ RUN Rscript -e 'devtools::install_github("linogaliana/tablelight", dependencies 
 # WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
 RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr/local/lib/R/etc/Renviron
 
-RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-    echo "conda activate python-ENSAE" >> ~/.bashrc
-
-
-# Second stage: use the installed packages directories
-# FROM $BASE_IMAGE
-# COPY --from=install_packages /opt/texlive /opt/texlive
-# COPY --from=install_packages /usr/local/texlive /usr/local/texlive
-# COPY --from=install_packages /usr/local/lib/R/site-library /usr/local/lib/R/site-library
 

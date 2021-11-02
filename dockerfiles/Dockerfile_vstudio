@@ -1,14 +1,26 @@
 FROM linogaliana/vscode-python:conda
 
+USER root
+
 # Create the environment:
 COPY environment.yml .
-RUN conda env create -f environment.yml -n pythonENSAE
 
-RUN echo "{\"workbench.colorTheme\": \"Default Dark+\", \"python.pythonPath\": \"/home/coder/.conda/envs/pythonENSAE/bin\"}" > /home/coder/.local/share/code-server/User/settings.json
-RUN echo "import sys ; from IPython.core.ultratb import ColorTB ; sys.excepthook = ColorTB() ;" >> /home/coder/.conda/envs/pythonENSAE/lib/python3.9/site-packages/sitecustomize.py
+RUN conda install mamba -n base -c conda-forge && \
+    mamba env create --force -n -q python-ENSAE --file environment.yml
+
+RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
+    echo "conda activate python-ENSAE" >> ~/.bashrc
+
+RUN conda info --envs
+
+
+RUN echo "{\"workbench.colorTheme\": \"Default Dark+\", \"python.pythonPath\": \"/home/coder/local/bin/conda/envs/python-ENSAE/bin\"}" > /home/coder/.local/share/code-server/User/settings.json
+RUN echo "import sys ; from IPython.core.ultratb import ColorTB ; sys.excepthook = ColorTB() ;" >> /home/coder/local/bin/conda/envs/python-ENSAE/lib/python3.9/site-packages/sitecustomize.py
 
 # MAKE SURE THE CONDAENV IS USED ----------------
 
 ENV CONDA_DEFAULT_ENV="pythonENSAE"
 
-ENV PATH="/home/coder/.conda/envs/pythonENSAE/bin:$PATH"
+ENV PATH="/home/coder/local/bin/conda/envs/python-ENSAE/bin:$PATH"
+
+USER coder
