@@ -4,7 +4,7 @@ FROM linogaliana/vscode-python:conda
 COPY environment.yml .
 
 RUN conda install mamba -n base -c conda-forge && \
-    mamba env create --force -n python-ENSAE --file environment.yml
+    sudo mamba env create --force -n python-ENSAE --file environment.yml
 
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
