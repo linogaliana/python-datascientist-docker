@@ -6,7 +6,7 @@ USER root
 COPY environment.yml .
 
 RUN conda install mamba -n base -c conda-forge && \
-    mamba env create --force -n python-ENSAE --file environment.yml
+    mamba env create --force -n -q python-ENSAE --file environment.yml
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate python-ENSAE" >> ~/.bashrc
