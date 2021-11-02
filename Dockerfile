@@ -50,10 +50,3 @@ RUN Rscript -e 'devtools::install_github("linogaliana/tablelight", dependencies 
 RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr/local/lib/R/etc/Renviron
 
 
-
-# Second stage: use the installed packages directories
-# FROM $BASE_IMAGE
-# COPY --from=install_packages /opt/texlive /opt/texlive
-# COPY --from=install_packages /usr/local/texlive /usr/local/texlive
-# COPY --from=install_packages /usr/local/lib/R/site-library /usr/local/lib/R/site-library
-
