@@ -36,7 +36,6 @@ COPY environment.yml .
 
 RUN . /opt/conda/etc/profile.d/conda.sh && \
     conda install mamba -n base -c conda-forge && \
-    mamba env update -n python-ENSAE --file environment.yml && \
     mamba env create --force --file environment.yml
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
