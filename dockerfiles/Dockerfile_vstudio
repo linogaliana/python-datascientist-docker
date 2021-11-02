@@ -1,10 +1,12 @@
 FROM linogaliana/vscode-python:conda
 
+USER root
+
 # Create the environment:
 COPY environment.yml .
 
 RUN conda install mamba -n base -c conda-forge && \
-    sudo mamba env create --force -n python-ENSAE --file environment.yml
+    mamba env create --force -n python-ENSAE --file environment.yml
 
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
@@ -18,3 +20,4 @@ RUN echo "import sys ; from IPython.core.ultratb import ColorTB ; sys.excepthook
 ENV CONDA_DEFAULT_ENV="pythonENSAE"
 
 ENV PATH="/home/coder/.conda/envs/pythonENSAE/bin:$PATH"
+
