@@ -33,6 +33,7 @@ dependencies:
     - rapidfuzz
     - requests
     - rtree
+    - sklearn>=1.0
     - scikit-image
     - seaborn
     - selenium
