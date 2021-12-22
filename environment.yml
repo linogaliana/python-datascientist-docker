@@ -36,6 +36,7 @@ dependencies:
     - scikit-learn>=1.0
     - scikit-image
     - seaborn
+    - sentence_transformers    
     - selenium
     - spacy
     - statsmodels    
