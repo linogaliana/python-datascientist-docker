@@ -42,5 +42,5 @@ dependencies:
     - tabulate    
     - wordcloud
     - xlrd
-    - yellowbrick
+    - yellowbrick>=1.3
     - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master#egg=pynsee"
