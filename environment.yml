@@ -37,10 +37,11 @@ dependencies:
     - scikit-image
     - seaborn
     - selenium
+    - sentence-transformers
     - spacy>=3.1.0
     - statsmodels    
     - tabulate    
     - wordcloud
     - xlrd
-    - yellowbrick>=1.3
+    - yellowbrick
     - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master#egg=pynsee"
