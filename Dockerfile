@@ -5,7 +5,11 @@ ARG BASE_IMAGE=rocker/verse:4.0.2
 FROM $BASE_IMAGE AS install_packages
 
 RUN Rscript -e "remotes::install_github('yihui/xfun')" \
-    && Rscript -e "remotes::install_github('rstudio/blogdown')"
+    && Rscript -e 'remotes::install_github("yihui/knitr")' \
+    && Rscript -e 'install.packages(c("rmarkdown", "here"))' \
+    && Rscript -e "remotes::install_github('rstudio/blogdown')" \
+    && Rscript -e 'blogdown::install_hugo("0.83.0", force = TRUE)' \
+    && Rscript -e "install.packages(c('remotes', 'reticulate'), dependencies = TRUE)"
 
 
 RUN apt-get update
@@ -42,8 +46,6 @@ RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
 
 
 # R packages 
-RUN Rscript -e "install.packages(c('knitr','rmarkdown','blogdown'))"
-RUN Rscript -e 'install.packages("reticulate", dependencies = TRUE)'
 RUN Rscript -e 'devtools::install_github("linogaliana/tablelight", dependencies = TRUE)'
 
 # WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
