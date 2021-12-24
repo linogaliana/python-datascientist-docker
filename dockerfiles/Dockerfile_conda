@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=linogaliana/python-datascientist:minimal
+FROM linogaliana/python-datascientist:minimal
 
 # Create the environment:
 COPY environment.yml .
