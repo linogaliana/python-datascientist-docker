@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker
     steps:
-        uses: linogaliana/python-datascientist-actions@v1
+      - uses: linogaliana/python-datascientist-actions@v1
         with:
           environment-yaml-path: 'environment-visualisation.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
