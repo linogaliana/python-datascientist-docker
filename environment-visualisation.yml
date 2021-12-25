@@ -1,0 +1,27 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - GDAL
+  - contextily
+  - descartes
+  - folium
+  - geopandas
+  - geoplot
+  - plotly
+  - python-kaleido
+  - pip:
+    - jupyter
+    - jupytext
+    - lxml
+    - matplotlib
+    - nbconvert
+    - numpy
+    - pandas
+    - rasterio
+    - requests
+    - rtree
+    - seaborn
+    - tabulate    
+    - xlrd
