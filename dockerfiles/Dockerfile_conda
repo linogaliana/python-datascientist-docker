@@ -1,7 +1,10 @@
+ARG YAML_PATH=environment-manipulation.yml
+
 FROM linogaliana/python-datascientist:minimal
 
+
 # Create the environment:
-COPY environment.yml .
+COPY $YAML_PATH environment.yml
 
 RUN conda install mamba -n base -c conda-forge && \
     mamba env create --force -q -n python-ENSAE --file environment.yml
