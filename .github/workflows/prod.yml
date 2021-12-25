@@ -73,7 +73,7 @@ jobs:
           push: true
           tags: linogaliana/python-datascientist:manipulation
           build-args: |
-              YAML_PATH="environment-manipulation.yml"
+              YAML_PATH=environment-manipulation.yml
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
