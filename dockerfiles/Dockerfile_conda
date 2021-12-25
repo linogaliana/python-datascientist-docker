@@ -1,15 +1,16 @@
-ARG YAML_PATH=environment-manipulation.yml
+#ARG YAML_PATH=environment-manipulation.yml
 
 # Lifehack
-FROM ${YAML_PATH} as envirfile
+#FROM ${YAML_PATH} as envirfile
 
 FROM linogaliana/python-datascientist:minimal
 
 
 # Create the environment:
-COPY --from=envirfile .
+#COPY --from=envirfile .
 #COPY ${YAML_PATH} .
-RUN mv envirfile environment.yml
+#RUN mv envirfile environment.yml
+COPY environment.yml .
 
 RUN cat environment.yml
 
