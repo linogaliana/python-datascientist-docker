@@ -70,7 +70,7 @@ jobs:
         with:
           file: "dockerfiles/Dockerfile_conda"
           push: true
-          tags: linogaliana/python-datascientist:latest
+          tags: linogaliana/python-datascientist:manipulation
           build-args: |
               YAML_PATH=environment-manipulation.yml
       -
