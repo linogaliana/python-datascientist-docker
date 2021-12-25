@@ -65,8 +65,7 @@ jobs:
         if: ${{ github.repository == 'linogaliana/python-datascientist-docker' }}
         id: docker_build
         uses: docker/build-push-action@v2
-        build-args:
-          environment_file: |
+        build-args: |
             YAML_PATH=environment-manipulation.yml
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
