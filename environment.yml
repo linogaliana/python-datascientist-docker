@@ -39,7 +39,6 @@ dependencies:
     - selenium
     - sentence-transformers
     - spacy>=3.1.0
-    - spacy-model-en_core_web_sm>=3.1.0
     - statsmodels    
     - tabulate    
     - wordcloud
