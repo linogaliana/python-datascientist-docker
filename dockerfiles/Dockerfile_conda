@@ -28,7 +28,7 @@ RUN Rscript -e 'devtools::install_github("linogaliana/tablelight", dependencies 
 RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr/local/lib/R/etc/Renviron
 
 # DOWNLOAD SOME CORPUS FOR NLP
-alias python='/opt/conda/envs/python-ENSAE/bin/python'
+RUN alias python='/opt/conda/envs/python-ENSAE/bin/python'
 RUN echo "alias python='/opt/conda/envs/python-ENSAE/bin/python'" >> ~/.bashrc
 ENV PATH="$PATH:/opt/conda/envs/python-ENSAE/bin/python"
 RUN python -m spacy download en_core_web_sm
