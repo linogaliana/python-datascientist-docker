@@ -31,5 +31,5 @@ RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr
 RUN alias python='/opt/conda/envs/python-ENSAE/bin/python'
 RUN echo "alias python='/opt/conda/envs/python-ENSAE/bin/python'" >> ~/.bashrc
 ENV PATH="$PATH:/opt/conda/envs/python-ENSAE/bin/python"
-RUN python -m spacy download en_core_web_sm
-RUN python -m gensim.downloader --download glove-wiki-gigaword-200
+RUN opt/conda/envs/python-ENSAE/bin/python -m spacy download en_core_web_sm
+RUN opt/conda/envs/python-ENSAE/bin/python -m gensim.downloader --download glove-wiki-gigaword-200
