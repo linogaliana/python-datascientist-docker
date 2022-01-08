@@ -29,4 +29,5 @@ RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr
 
 # DOWNLOAD SOME CORPUS FOR NLP
 # RUN export PATH="$PATH:/opt/conda/envs/python-ENSAE/bin/python"
+RUN python -m spacy download en_core_web_sm
 RUN python -m gensim.downloader --download glove-wiki-gigaword-200
