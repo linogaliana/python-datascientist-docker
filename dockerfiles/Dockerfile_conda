@@ -2,7 +2,7 @@
 ARG download_nlp=0
 
 # Lifehack
-FROM ${YAML_PATH} as envirfile
+# FROM ${YAML_PATH} as envirfile
 
 FROM linogaliana/python-datascientist:minimal AS base
 
