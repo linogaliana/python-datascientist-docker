@@ -104,7 +104,7 @@ jobs:
     steps:
       - uses: linogaliana/python-datascientist-actions/docker@v1.0.116
         with:
-          environment-yaml-path: 'environment.yml'
+          environment-yaml-path: 'environment-complete.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
           docker-image: 'linogaliana/python-datascientist:latest'
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
