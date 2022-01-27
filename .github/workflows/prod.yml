@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker-minimal
     steps:
-      - uses: linogaliana/python-datascientist-actions/docker@v1.0.137
+      - uses: linogaliana/python-datascientist-actions/docker@v1.0.138
         with:
           environment-yaml-path: 'environment-manipulation.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker-minimal
     steps:
-      - uses: linogaliana/python-datascientist-actions/docker@v1.0.137
+      - uses: linogaliana/python-datascientist-actions/docker@v1.0.138
         with:
           environment-yaml-path: 'environment-visualisation.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker-minimal
     steps:
-      - uses: linogaliana/python-datascientist-actions/docker@v1.0.137
+      - uses: linogaliana/python-datascientist-actions/docker@v1.0.138
         with:
           environment-yaml-path: 'environment-modelisation.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker-minimal
     steps:
-      - uses: linogaliana/python-datascientist-actions/docker@v1.0.137
+      - uses: linogaliana/python-datascientist-actions/docker@v1.0.138
         with:
           environment-yaml-path: 'environment-nlp.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
@@ -102,7 +102,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: docker-minimal
     steps:
-      - uses: linogaliana/python-datascientist-actions/docker@v1.0.137
+      - uses: linogaliana/python-datascientist-actions/docker@v1.0.138
         with:
           environment-yaml-path: 'environment-complete.yml'
           dockerfile-path: 'dockerfiles/Dockerfile_conda'
