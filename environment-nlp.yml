@@ -1,0 +1,33 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - keras
+  - python-kaleido
+  - tensorflow
+  - pip:
+    - elasticsearch[async]
+    - fasttext
+    - jupyter
+    - jupytext
+    - matplotlib
+    - nbconvert
+    - nltk
+    - numpy
+    - pandas
+    - pyLDAvis
+    - python-Levenshtein
+    - pywaffle
+    - rasterio
+    - rapidfuzz
+    - requests
+    - scikit-learn>=1.0
+    - scikit-image
+    - seaborn
+    - sentence-transformers
+    - spacy>=3.1.0
+    - tabulate    
+    - wordcloud
+    - xlrd
+    - yellowbrick

@@ -1,0 +1,32 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - GDAL
+  - bs4
+  - contextily
+  - descartes
+  - geopandas
+  - geoplot
+  - keras
+  - plotly
+  - python-kaleido
+  - tensorflow
+  - pip:
+    - jupyter
+    - jupytext
+    - matplotlib
+    - nbconvert
+    - numpy
+    - pandas
+    - rasterio
+    - requests
+    - rtree
+    - scikit-learn>=1.0
+    - scikit-image
+    - seaborn
+    - statsmodels    
+    - tabulate    
+    - xlrd
+    - yellowbrick
