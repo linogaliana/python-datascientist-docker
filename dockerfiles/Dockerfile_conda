@@ -2,7 +2,7 @@ ARG yaml_path=environment-manipulation.yml
 ARG download_nlp=0
 
 # Lifehack
-FROM ${YAML_PATH} as envirfile
+FROM ${yaml_path} as envirfile
 
 FROM linogaliana/python-datascientist:minimal AS base
 
