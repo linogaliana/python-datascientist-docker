@@ -7,7 +7,7 @@ FROM ${yaml_path} as envirfile
 FROM linogaliana/python-datascientist:minimal AS base
 
 # Create the environment:
-COPY --from=envirfile environment.yml
+COPY --from=envirfile ./environment.yml
 #COPY ${yaml_path} .
 #RUN mv ${yaml_path} environment.yml
 #COPY environment.yml .
