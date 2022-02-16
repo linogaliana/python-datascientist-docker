@@ -34,3 +34,21 @@ RUN ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 ENV PATH /opt/conda/bin:$PATH
 RUN conda --version
 
+
+# Create the environment:
+COPY environment.yml .
+
+RUN conda install mamba -n base -c conda-forge && \
+    mamba env create --force -q -n python-ENSAE --file environment.yml
+
+RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
+    echo "conda activate python-ENSAE" >> ~/.bashrc
+
+
+# R packages 
+RUN Rscript -e 'devtools::install_github("linogaliana/tablelight", dependencies = TRUE)'
+
+# WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
+RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr/local/lib/R/etc/Renviron
+
+
