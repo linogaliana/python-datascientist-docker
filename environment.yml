@@ -13,6 +13,7 @@ dependencies:
   - keras
   - plotly
   - python-kaleido
+  - sentence-transformers
   - tensorflow
   - pip:
     - dash
@@ -37,7 +38,6 @@ dependencies:
     - scikit-image
     - seaborn
     - selenium
-    - sentence-transformers
     - spacy>=3.1.0
     - statsmodels    
     - tabulate    
