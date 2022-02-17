@@ -13,8 +13,7 @@ RUN Rscript -e "remotes::install_github('yihui/xfun')" \
 
 
 RUN apt-get update
-RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get install -y wget libstdc++6 && rm -rf /var/lib/apt/lists/*
 
 RUN wget \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
