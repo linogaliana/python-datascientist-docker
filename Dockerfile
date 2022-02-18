@@ -11,7 +11,7 @@ RUN Rscript -e "remotes::install_github('yihui/xfun')" \
     && Rscript -e 'blogdown::install_hugo("0.83.0", force = TRUE)' \
     && Rscript -e "install.packages(c('remotes', 'reticulate'), dependencies = TRUE)"
 
-
+RUN add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt-get update
 RUN apt-get install -y wget libstdc++6 && rm -rf /var/lib/apt/lists/*
 
