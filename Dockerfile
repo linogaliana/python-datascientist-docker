@@ -13,10 +13,10 @@ RUN Rscript -e "remotes::install_github('yihui/xfun')" \
 
 
 RUN apt-get update && \
-    apt-get install software-properties-common \
+    apt-get -y install software-properties-common \
     && add-apt-repository ppa:ubuntu-toolchain-r/test
-RUN apt-get update
-RUN apt-get install gcc-4.9
+RUN apt-get -y update
+RUN apt-get -y install gcc-4.9
 RUN apt-get install -y wget libstdc++6 && rm -rf /var/lib/apt/lists/*
 
 
