@@ -12,8 +12,8 @@ RUN Rscript -e "remotes::install_github('yihui/xfun')" \
     && Rscript -e "install.packages(c('remotes', 'reticulate'), dependencies = TRUE)"
 
 
-RUN apt-get update &&
-    sudo apt-get install software-properties-common \
+RUN apt-get update && \
+    apt-get install software-properties-common \
     && add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt-get update
 RUN apt-get install gcc-4.9
