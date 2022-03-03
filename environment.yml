@@ -12,6 +12,7 @@ dependencies:
   - geoplot
   - keras
   - plotly
+  - pytorch
   - python-kaleido
   - sentence-transformers
   - tensorflow

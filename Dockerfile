@@ -11,14 +11,7 @@ RUN Rscript -e "remotes::install_github('yihui/xfun')" \
     && Rscript -e 'blogdown::install_hugo("0.83.0", force = TRUE)' \
     && Rscript -e "install.packages(c('remotes', 'reticulate'), dependencies = TRUE)"
 
-
-RUN apt-get update && \
-    apt-get -y install software-properties-common \
-    && apt-add-repository -yu 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu xenial main'
-RUN apt-get -y update
-RUN apt-get -y install gcc-4.9
-RUN apt-get install -y wget libstdc++6 && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get update && apt install -y build-essential
 
 RUN wget \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
