@@ -14,7 +14,6 @@ dependencies:
   - plotly
   - pytorch
   - python-kaleido
-  - sentence-transformers
   - tensorflow
   - pip:
     - dash
@@ -35,12 +34,14 @@ dependencies:
     - rapidfuzz
     - requests
     - rtree
+    - sentence-transformers
     - scikit-learn>=1.0
     - scikit-image
     - seaborn
     - selenium
     - spacy>=3.1.0
-    - statsmodels    
+    - statsmodels
+    - tensorflow
     - tabulate    
     - wordcloud
     - xlrd
