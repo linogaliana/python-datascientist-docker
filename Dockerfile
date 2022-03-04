@@ -41,11 +41,13 @@ RUN conda install mamba -n base -c conda-forge && \
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate python-ENSAE" >> ~/.bashrc
 
+RUN opt/conda/envs/python-ENSAE/bin/python -m spacy download en_core_web_sm
+RUN opt/conda/envs/python-ENSAE/bin/python -m gensim.downloader --download glove-wiki-gigaword-200
+
 
 # R packages 
 RUN Rscript -e 'devtools::install_github("linogaliana/tablelight", dependencies = TRUE)'
 
 # WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
 RUN echo "RETICULATE_PYTHON = '/opt/conda/envs/python-ENSAE/bin/python'" >> /usr/local/lib/R/etc/Renviron
-
 
