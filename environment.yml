@@ -12,6 +12,7 @@ dependencies:
   - geoplot
   - keras
   - plotly
+  - poppler-data
   - pytorch
   - python-kaleido
   - tensorflow
