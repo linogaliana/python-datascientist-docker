@@ -9,7 +9,7 @@ RUN apt-get -y update && \
 # Install hugo
 ENV HUGO_VERSION="0.91.2" 
 RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && \
-    apt install hugo_${HUGO_VERSION}_Linux-64bit.deb && \
+    apt install "./hugo_${HUGO_VERSION}_Linux-64bit.deb" && \
     rm -f hugo_${HUGO_VERSION}_Linux-64bit.deb
 
 # Install Miniconda
