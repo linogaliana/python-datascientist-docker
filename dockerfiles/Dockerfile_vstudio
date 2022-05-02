@@ -7,7 +7,7 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install hugo
-ENV HUGO_VERSION="0.91.2" 
+ENV HUGO_VERSION="0.83.0" 
 RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && \
     apt install "./hugo_${HUGO_VERSION}_Linux-64bit.deb" && \
     rm -f hugo_${HUGO_VERSION}_Linux-64bit.deb
