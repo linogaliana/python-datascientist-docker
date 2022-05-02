@@ -7,8 +7,10 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install hugo
-RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.91.2/hugo_0.91.2_Linux-64bit.deb -o hugo.deb && \
-    apt install ./hugo.deb
+ENV HUGO_VERSION="0.91.2" 
+RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && \
+    apt install hugo_${HUGO_VERSION}_Linux-64bit.deb && \
+    rm -f hugo_${HUGO_VERSION}_Linux-64bit.deb
 
 # Install Miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
@@ -26,8 +28,9 @@ RUN conda install mamba -n base -c conda-forge && \
 
 # Installation quarto
 ENV QUARTO_VERSION="0.9.287"
-RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb"
-RUN apt install "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
+RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
+    apt install "./quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
+    rm -f "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
 
 RUN conda info --envs
 
