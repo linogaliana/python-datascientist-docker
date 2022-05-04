@@ -16,9 +16,9 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 
 # Install hugo
 ENV HUGO_VERSION="0.95.0" 
-RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && \
-    apt install "./hugo_${HUGO_VERSION}_Linux-64bit.deb" && \
-    rm -f hugo_${HUGO_VERSION}_Linux-64bit.deb
+RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb && \
+    apt install "./hugo_extended_${HUGO_VERSION}_Linux-64bit.deb" && \
+    rm -f hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 
 # Install Miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
