@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - quarto
 
 jobs:
   docker:
@@ -36,7 +37,7 @@ jobs:
         with:
           file: "dockerfiles/Dockerfile_vstudio"
           push: true
-          tags: linogaliana/python-datascientist-vstudio:latest
+          tags: linogaliana/python-datascientist-vstudio:quarto
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
