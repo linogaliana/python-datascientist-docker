@@ -13,6 +13,7 @@ dependencies:
   - keras
   - plotly
   - poppler-data
+  - pyarrow
   - pytorch
   - python-kaleido
   - tensorflow
