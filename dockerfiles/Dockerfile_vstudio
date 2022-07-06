@@ -6,8 +6,8 @@ RUN apt-get -y update && \
     apt-get install build-essential -y && \
     rm -rf /var/lib/apt/lists/*
  
- RUN apt-get -y update && \
-    apt install -y imagemagick
+RUN apt-get -y update && \
+    DEBIAN_FRONTEND=noninteractive apt install -y imagemagick
 
 # Install recent go version
 ENV GO_VERSION="1.18.1"
