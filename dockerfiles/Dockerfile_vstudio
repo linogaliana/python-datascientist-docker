@@ -1,5 +1,7 @@
 FROM inseefrlab/vscode-python
 
+USER root
+
 RUN apt-get -y update && \
     apt-get -y install wget && \
     apt-get install -y git && \
