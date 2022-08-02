@@ -8,6 +8,8 @@ RUN conda install mamba -n base -c conda-forge && \
 
 RUN conda info --envs
 
+RUN conda activate python-ENSAE
+
 # Make Python interpreter from "monenv" available
 ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
 
