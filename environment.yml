@@ -30,6 +30,7 @@ dependencies:
     - nltk
     - numpy
     - pandas
+    - py7zr
     - pyLDAvis
     - python-Levenshtein
     - pywaffle
