@@ -51,7 +51,7 @@ ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
 # Install chrome
 RUN apt-get install -y wget
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt-get install ./google-chrome-stable_current_amd64.deb
+RUN apt-get install ./google-chrome-stable_current_amd64.deb -y
 
 
 RUN python -m spacy download en_core_web_sm
