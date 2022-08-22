@@ -20,6 +20,7 @@ dependencies:
   - pip:
     - dash
     - elasticsearch[async]
+    - kaleido
     - fasttext
     - jupyter
     - jupytext
@@ -30,6 +31,7 @@ dependencies:
     - nltk
     - numpy
     - pandas
+    - py7zr
     - pyLDAvis
     - python-Levenshtein
     - pywaffle

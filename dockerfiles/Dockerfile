@@ -42,11 +42,18 @@ ENV QUARTO_VERSION="1.0.37"
 RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     apt install "./quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     rm -f "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
+RUN quarto install extension quarto-ext/fontawesome
 
 RUN conda info --envs
 
 # Make Python interpreter from "monenv" available
 ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
+
+# Install chrome
+RUN apt-get install -y wget
+RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN apt-get install ./google-chrome-stable_current_amd64.deb -y
+
 
 RUN python -m spacy download en_core_web_sm
 RUN python -m gensim.downloader --download glove-wiki-gigaword-200
