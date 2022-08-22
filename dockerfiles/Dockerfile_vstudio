@@ -2,8 +2,6 @@ FROM inseefrlab/vscode-python
 
 USER root
 
-RUN echo $MAMBA_DIR
-
 # Create the environment:
 COPY environment.yml .
 
@@ -13,6 +11,8 @@ RUN conda install mamba -n base -c conda-forge && \
 RUN conda info --envs
 
 RUN echo ". $/anaconda3/etc/profile.d/conda.sh && conda activate python-ENSAE" >> ${HOME}/.bashrc
+# Make Python interpreter from "monenv" available
+ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
 
 RUN python -m spacy download en_core_web_sm
 RUN python -m gensim.downloader --download glove-wiki-gigaword-200
