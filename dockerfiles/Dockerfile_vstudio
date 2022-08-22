@@ -1,5 +1,7 @@
 FROM inseefrlab/vscode-python
 
+SHELL ["/bin/bash", "-c"]
+
 USER root
 
 # Make conda command available

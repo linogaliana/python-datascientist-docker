@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+SHELL ["/bin/bash", "-c"]
+
 RUN apt-get -y update && \
     apt-get -y install wget && \
     apt-get install -y git && \
