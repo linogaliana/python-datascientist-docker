@@ -18,8 +18,6 @@ RUN conda info --envs
 # Make Python interpreter from "monenv" available
 ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
 
-RUN conda activate python-ENSAE
-
 RUN python -m spacy download en_core_web_sm
 RUN python -m gensim.downloader --download glove-wiki-gigaword-200
 
