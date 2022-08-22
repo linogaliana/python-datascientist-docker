@@ -2,6 +2,9 @@ FROM inseefrlab/vscode-python
 
 USER root
 
+# Make conda command available
+ENV PATH="/miniconda/bin:${PATH}"
+
 # Create the environment:
 COPY environment.yml .
 
@@ -10,7 +13,6 @@ RUN conda install mamba -n base -c conda-forge && \
 
 RUN conda info --envs
 
-RUN echo ". $/anaconda3/etc/profile.d/conda.sh && conda activate python-ENSAE" >> ${HOME}/.bashrc
 # Make Python interpreter from "monenv" available
 ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
 
