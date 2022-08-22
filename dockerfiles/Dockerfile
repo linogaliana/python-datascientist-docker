@@ -42,7 +42,6 @@ ENV QUARTO_VERSION="1.0.37"
 RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     apt install "./quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     rm -f "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
-RUN quarto install extension quarto-ext/fontawesome
 
 RUN conda info --envs
 
