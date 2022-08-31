@@ -10,6 +10,7 @@ dependencies:
   - folium
   - geopandas
   - geoplot
+  - graphviz
   - keras
   - plotly
   - poppler-data
