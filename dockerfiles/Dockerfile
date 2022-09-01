@@ -17,6 +17,10 @@ RUN wget https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz && \
 
 ENV PATH="/usr/local/go/bin:${PATH}"
 
+# Install graphviz
+RUN apt-get -y update && \
+    apt-get install graphviz
+
 # Install hugo
 ENV HUGO_VERSION="0.97.3" 
 RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb && \
