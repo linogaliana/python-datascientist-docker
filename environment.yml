@@ -22,6 +22,7 @@ dependencies:
     - elasticsearch[async]
     - kaleido
     - fasttext
+    - graphviz
     - jupyter
     - jupytext
     - jupyter-cache
