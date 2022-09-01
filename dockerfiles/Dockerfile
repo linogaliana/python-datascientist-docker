@@ -19,7 +19,7 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 
 # Install graphviz
 RUN apt-get -y update && \
-    apt-get install graphviz
+    apt-get install -y graphviz
 
 # Install hugo
 ENV HUGO_VERSION="0.97.3" 
