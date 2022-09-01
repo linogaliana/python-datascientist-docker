@@ -33,7 +33,7 @@ dependencies:
     - numpy
     - pandas
     - py7zr
-    - pyarrow
+    - pyarrow>=9.0.0
     - pyLDAvis
     - python-Levenshtein
     - pywaffle
