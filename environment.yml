@@ -41,6 +41,7 @@ dependencies:
     - rapidfuzz
     - requests
     - rtree
+    - s3fs
     - sentence-transformers
     - scikit-learn>=1.0
     - scikit-image
