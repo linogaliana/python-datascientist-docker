@@ -18,7 +18,6 @@ dependencies:
   - python-kaleido
   - tensorflow
   - pip:
-    - cartiflette
     - dash
     - elasticsearch[async]
     - kaleido
