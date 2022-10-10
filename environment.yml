@@ -18,7 +18,7 @@ dependencies:
   - python-kaleido
   - tensorflow
   - pip:
-    - cartogether
+    - cartiflette
     - dash
     - elasticsearch[async]
     - kaleido
@@ -54,4 +54,4 @@ dependencies:
     - xlrd
     - yellowbrick
     - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master#egg=pynsee"
-    - "--editable=git+https://github.com/InseeFrLab/cartogether@main#egg=cartogether"
+    - "--editable=git+https://github.com/InseeFrLab/cartiflette@main#egg=cartiflette"
