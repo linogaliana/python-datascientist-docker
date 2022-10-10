@@ -54,4 +54,4 @@ dependencies:
     - xlrd
     - yellowbrick
     - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master#egg=pynsee"
-    - "--editable=git+https://github.com/InseeFrLab/cartogether@master#egg=cartiflette"
+    - "--editable=git+https://github.com/InseeFrLab/cartogether@main#egg=cartiflette"
