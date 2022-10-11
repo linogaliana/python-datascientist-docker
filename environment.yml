@@ -34,6 +34,7 @@ dependencies:
     - pandas
     - py7zr
     - pyarrow>=9.0.0
+    - pygeos
     - pyLDAvis
     - python-Levenshtein
     - pywaffle
