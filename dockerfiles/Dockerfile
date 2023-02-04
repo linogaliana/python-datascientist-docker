@@ -42,7 +42,7 @@ RUN conda install mamba -n base -c conda-forge && \
     mamba env create --force -q -n python-ENSAE --file environment.yml
 
 # Installation quarto
-ENV QUARTO_VERSION="1.0.37"
+ENV QUARTO_VERSION="1.3.129"
 RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     apt install "./quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     rm -f "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
