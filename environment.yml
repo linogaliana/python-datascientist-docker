@@ -51,7 +51,6 @@ dependencies:
     - spacy>=3.1.0
     - statsmodels
     - tabulate
-    - topojson
     - wordcloud
     - xlrd
     - yellowbrick
