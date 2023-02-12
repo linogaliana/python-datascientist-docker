@@ -35,7 +35,7 @@ dependencies:
     - py7zr
     - pyarrow>=9.0.0
     - pygeos
-    - pyLDAvis>=3.31.1
+    - pyLDAvis>=3.3.1
     - python-Levenshtein
     - pywaffle
     - rasterio
