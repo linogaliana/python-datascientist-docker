@@ -36,6 +36,7 @@ dependencies:
     - pyarrow>=9.0.0
     - pygeos
     - pyLDAvis>=3.3.1
+    - pynsee
     - python-Levenshtein
     - pywaffle
     - rasterio
@@ -54,5 +55,4 @@ dependencies:
     - wordcloud
     - xlrd
     - yellowbrick
-    - "--editable=git+https://github.com/InseeFrLab/Py-Insee-Data@master#egg=pynsee"
     - "--editable=git+https://github.com/InseeFrLab/cartiflette@main#egg=cartiflette"
