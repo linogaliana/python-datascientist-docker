@@ -1,5 +1,5 @@
 # Image docker pour le cours "Python pour data-scientists et économistes" :snake:
-[![build-doc Actions Status](https://github.com/linogaliana/python-datascientist-docker/actions/workflows/prod.yml/badge.svg)](https://github.com/linogaliana/python-datascientist-docker/actions)
+
 [![Docker Pulls](https://img.shields.io/docker/pulls/linogaliana/python-datascientist)](https://hub.docker.com/repository/docker/linogaliana/python-datascientist/general)
 
 Ce dépôt Github stocke les images `Docker` 🐳 nécessaire pour construire le site
