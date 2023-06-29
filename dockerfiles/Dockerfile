@@ -9,23 +9,9 @@ RUN apt-get -y update && \
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt install -y imagemagick
 
-# Install recent go version
-ENV GO_VERSION="1.18.4"
-RUN wget https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz && \
-    rm -rf /usr/local/go && \
-    tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
-
-ENV PATH="/usr/local/go/bin:${PATH}"
-
 # Install graphviz
 RUN apt-get -y update && \
     apt-get install -y graphviz
-
-# Install hugo
-ENV HUGO_VERSION="0.97.3" 
-RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb && \
-    apt install "./hugo_extended_${HUGO_VERSION}_Linux-64bit.deb" && \
-    rm -f hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 
 # Install Miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
