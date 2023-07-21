@@ -33,10 +33,7 @@ RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_V
 RUN conda info --envs
 
 # Install chrome
-RUN apt-get install -y wget
-RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt-get install ./google-chrome-stable_current_amd64.deb -y && \
-  rm -f google-chrome-stable_current_amd64.deb
+RUN apt install chromium-browser
 
 
 RUN python -m spacy download en_core_web_sm
