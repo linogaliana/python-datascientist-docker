@@ -33,7 +33,7 @@ RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_V
 RUN conda info --envs
 
 # Install chrome
-RUN apt install chromium-browser
+# RUN apt install chromium-browser
 
 
 RUN python -m spacy download en_core_web_sm
