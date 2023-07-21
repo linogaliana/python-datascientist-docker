@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM inseefrlab/onyxia-python-minimal
 
 RUN apt-get -y update && \
     apt-get -y install wget && \
@@ -13,19 +13,14 @@ RUN apt-get -y update && \
 RUN apt-get -y update && \
     apt-get install -y graphviz
 
-# Install Miniconda
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-    bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda && \
-    rm -f Miniconda3-latest-Linux-x86_64.sh
-
-# Make conda command available
-ENV PATH="/miniconda/bin:${PATH}"
-
 # Create the environment:
 COPY environment.yml .
 
-RUN conda install mamba -n base -c conda-forge && \
-    mamba env create --force -q -n python-ENSAE --file environment.yml
+RUN mamba env update -n base -f environment.yml && \
+    # Clean
+    rm environment.yml && \ 
+    mamba clean --all -f -y && \
+    rm -rf /var/lib/apt/lists/*
 
 # Installation quarto
 ENV QUARTO_VERSION="1.4.176"
@@ -34,9 +29,6 @@ RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_V
     rm -f "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
 
 RUN conda info --envs
-
-# Make Python interpreter from "monenv" available
-ENV PATH="/miniconda/envs/python-ENSAE/bin:${PATH}"
 
 # Install chrome
 RUN apt-get install -y wget
