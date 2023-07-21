@@ -1,5 +1,7 @@
 FROM inseefrlab/onyxia-python-minimal
 
+USER root
+
 RUN apt-get -y update && \
     apt-get -y install wget && \
     apt-get install -y git && \
