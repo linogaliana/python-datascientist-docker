@@ -32,6 +32,7 @@ dependencies:
     - nltk
     - numpy
     - pandas
+    - plotnine
     - py7zr
     - pyarrow>=9.0.0
     - pygeos
