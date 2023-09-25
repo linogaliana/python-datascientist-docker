@@ -25,7 +25,7 @@ RUN mamba env update -n base -f environment.yml && \
     rm -rf /var/lib/apt/lists/*
 
 # Installation quarto
-ENV QUARTO_VERSION="1.4.176"
+ENV QUARTO_VERSION="1.3.450"
 RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     apt install "./quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
     rm -f "./quarto-${QUARTO_VERSION}-linux-amd64.deb"
