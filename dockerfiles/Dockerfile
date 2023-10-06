@@ -11,12 +11,14 @@ RUN apt-get -y update && \
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt install -y imagemagick
 
+RUN which python
+
 # Install graphviz
 RUN wget https://raw.githubusercontent.com/linogaliana/python-datascientist/master/requirements.txt -O requirements.txt && \
     pip install -r requirements.txt && \
-    pip install spacy
+    pip install spacy gensim
 
-RUN pip freeze
+RUN pip freeze 
 
 RUN python -m spacy download en_core_web_sm
 RUN python -m gensim.downloader --download glove-wiki-gigaword-200
