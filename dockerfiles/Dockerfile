@@ -12,7 +12,7 @@ RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt install -y imagemagick
 
 # Install graphviz
-RUN wget https://raw.githubusercontent.com/linogaliana/python-datascientist/master/requirements.txt -O requirements.txt &&
+RUN wget https://raw.githubusercontent.com/linogaliana/python-datascientist/master/requirements.txt -O requirements.txt && \
     pip install -r requirements.txt
 
 RUN pip freeze
