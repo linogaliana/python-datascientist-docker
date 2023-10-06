@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - master
-      - dev
+      - simple
 
 jobs:
   docker:
