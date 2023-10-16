@@ -16,7 +16,6 @@ RUN which python
 # Install graphviz
 RUN wget https://raw.githubusercontent.com/linogaliana/python-datascientist/master/requirements.txt -O requirements.txt && \
     pip install -r requirements.txt && \
-    pip install spacy gensim
 
 RUN pip freeze 
 
