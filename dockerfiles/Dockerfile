@@ -17,7 +17,8 @@ RUN which python
 RUN wget https://raw.githubusercontent.com/linogaliana/python-datascientist/master/requirements.txt -O requirements.txt && \
     pip install -r requirements.txt && \
     wget https://raw.githubusercontent.com/linogaliana/python-datascientist/master/requirements.sh -O requirements.sh && \
-    ./requirements.sh
+    sudo apt-get update && \
+    sudo apt install -y graphviz
 
 RUN pip freeze 
 
