@@ -1,4 +1,4 @@
-FROM inseefrlab/onyxia-python-minimal
+FROM inseefrlab/onyxia-jupyter-python
 
 USER root
 
