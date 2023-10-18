@@ -1,4 +1,4 @@
-FROM inseefrlab/onyxia-jupyter-python:py3.10.12-2023.10.16
+FROM inseefrlab/onyxia-jupyter-python:py3.11.4
 
 USER root
 
