@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - simple
 
 jobs:
   docker:
@@ -36,7 +37,7 @@ jobs:
         with:
           file: "dockerfiles/Dockerfile"
           push: true
-          tags: linogaliana/python-datascientist:latest
+          tags: linogaliana/python-datascientist:dev
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
